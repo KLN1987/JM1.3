@@ -1,0 +1,263 @@
+.main {
+  background-color: #F8F8F8;
+}
+
+.main__title {
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+  padding-top: 24px;
+  margin-bottom: 24px;
+}
+
+.main__navigation {
+  overflow: auto;
+  padding-left: 24px;
+  padding-right: 40px;
+  margin-bottom: 32px;
+}
+
+.main__navigation-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1140px;
+}
+
+.main__navigation-item {
+  text-align: center;
+}
+
+.main__navigation-item:not(:last-child) {
+  margin-right: 3px;
+}
+
+.main__navigation-item {
+  margin-bottom: 15px;
+  margin-top: 8px;
+}
+
+.main__navigation-link {
+  font-size: 16px;
+  line-height: 24px;
+  color: #7E7E82;
+  padding: 7px 14px;
+}
+
+.main__navigation-link:hover {
+  color: black;
+}
+
+.main__navigation-link:active {
+  background: #FFFFFF;
+  border: 2px solid #B8FFEC;
+  border-radius: 6px; 
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  padding: 7px 14px;
+  color: #7E7E82;
+}
+
+.main__description-text {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #1B1C21;
+}
+
+.main__description-size {
+  min-width: 288px;
+  height: 90px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.main__description-item {
+  margin-bottom: 30px;
+}
+
+.main__description-image {
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.main__description-img{
+  width: 100%;
+  height: auto;
+}
+
+.main__section-header {
+  padding: 15px 32px;
+  background: linear-gradient(270deg, #FFFFFF 0%, #F8F8F8 98.61%);
+}
+
+.main__section-title {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  color: #7E7E82;
+}
+
+.main__section-list {
+  padding-left: 16px;
+  padding-top: 16px;
+  padding-bottom: 52px;
+  padding-right: 16px;
+}
+
+.main__section-link {
+  background-color: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main__section-link:hover {
+  border-color: #41F6D7;
+}
+
+.main__section-link:active {
+  background-color: #41F6D7;
+}
+
+.main__section-link:after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  background: url('../img/brands-go.svg') no-repeat 0 0;
+}
+
+.main__section-item {
+  width: 240px;
+}
+
+.main__section_btn {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main__description-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  .main__description-size {
+    min-width: 312px;
+    height: 176px;
+    margin-left: 24px;
+    margin-right: 48px;
+  }
+
+  .main__description-image {
+    min-width: 360px;
+    height: 208px;
+    margin-bottom: 40px;
+    margin-right: 24px;
+  }
+
+  .main__section_btn {
+    display: flex;
+    padding-bottom: 16px;
+  }
+
+  .main__section-item {
+    margin-bottom: 16px;
+    margin-right: 24px;
+    width: 224px;
+  }
+
+  .main__section-link {
+    width: 224px;
+  }
+}
+
+@media (min-width: 768px) {
+  .main__section-list {
+    padding-top: 24px;
+    padding-left: 24px;
+    margin-bottom: 24px;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 100%;
+    height: 176px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main {
+    padding-top: 42px;
+  }
+
+  .main__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .main__title{
+    padding-top: 0px;
+  }
+
+  .main__title:before  {
+    margin-right: 30px;
+  }
+
+  .main__info {
+    display: flex;
+    align-items: center;
+  }
+
+  .main__navigation {
+    margin-bottom: 20px;
+    padding-right: 24px;
+    padding-left: 24px;
+    overflow: visible;
+  }
+
+  .main__navigation-item {
+    margin-bottom: 20px;
+  }
+
+  .main__navigation-list {
+    width: 100%;
+  }
+
+  .main__description-size {
+    margin-left: 34px;
+    margin-right: 36px;
+    width: 490px;
+    height: 176px;
+  }
+
+  .main__description-image {
+    width: 532px;
+    height: 307px;
+    overflow: hidden;
+    margin-bottom: 49px;
+    margin-right: 30px;
+  }
+
+  .main__section-list {
+    padding-left: 32px;
+  }
+
+  .main__section-link {
+    width: 240px; 
+  }
+
+  .main__section-item {
+    margin-right: 32px;
+  }
+}

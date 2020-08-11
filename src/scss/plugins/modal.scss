@@ -1,0 +1,52 @@
+.modal {
+  max-width: 440px;
+  background: #FFFFFF;
+  box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  height: 100%;
+}
+
+.modal__feedback,
+.modal__callback {
+  transform: translateY(-150%);
+  -webkit-transform: translateY(-150%);
+  -moz-transform: translateY(-150%);
+  -ms-transform: translateY(-150%);
+  -o-transform: translateY(-150%);
+  transition: transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  -ms-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
+}
+
+.modal__feedback-open,
+.modal__callback-open {
+  transform: translateY(0%);
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+}
+
+.modal__close {
+  background: url('../img/burger-close.svg') no-repeat 0 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  margin-left: 16px;
+  margin-bottom: 32px;
+  border: none;
+}
+
+.modal__title {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  margin-bottom: 24px;
+}
