@@ -14,111 +14,31 @@
   <div class="container">
     <header class="header">
       <div class="header__wrapper">
-        <div class="header__main">
-          <div class="header__top">
             <div class="header__open-menu">
               <button class="header__navigation-toggle-btn button button--menu" aria-label="Меню"></button>
               <div class="logo">
                 <a href="#" class="logo__link header__logo">
-                  <img src="img/logo.png" alt="logo" width="97" height="51">
+                  <img class="logo__image" src="img/logo.png" alt="logo" width="97" height="51">
                 </a>
               </div>
             </div>
-            <ul class="header__search-list">
-              <li class="header__search-item header__navigation-item">
-                <a href="#" class="header__search-link" aria-label="Поиск">
-                  <svg width="40" height="40" class="header__search-link_image">
-                    <use xlink:href="img/icons.svg#search"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-            <div class="side__menu header__mobile-menu">
-              <nav class="side__menu-navigation">
-                <ul class="side__menu-list">
-                  <li class="side__menu-item">
-                    <a href="#" class="side__menu-link">Ремонт техники</a>
-                  </li>
-                  <li class="side__menu-item">
-                    <a href="#" class="side__menu-link">Услуги и сервисы</a>
-                  </li>
-                  <li class="side__menu-item">
-                    <a href="#" class="side__menu-link">Корпоративным клиент</a>
-                  </li>
-                  <li class="side__menu-item">
-                    <a href="#" class="side__menu-link">Продавцам техники</a>
-                  </li>
-                  <li class="side__menu-item">
-                    <a href="#" class="side__menu-link">Партнерам</a>
-                  </li>
-                  <li class="side__menu-item">
-                    <a href="#" class="side__menu-link">Производителям</a>
-                  </li>
-                  <li class="side__menu-item">
-                    <a href="#" class="side__menu-link">Контакты</a>
-                  </li>
-                </ul>
-              </nav>
-              <ul class="contacts__list side__contacts">
-                <li class="contacts__item header__navigation-item">
-                  <a href="#" class="contacts__link callback" aria-label="Заказать звонок">
-                    <svg width="40" height="40" class="contacts__link_image">
-                      <use xlink:href="img/icons.svg#call"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="contacts__item header__navigation-item">
-                  <a href="#" class="contacts__link feedback" aria-label="Написать в чат">
-                    <svg width="40" height="40" class="contacts__link--image">
-                      <use xlink:href="img/icons.svg#chat"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="contacts__item header__navigation-item">
-                  <a href="#" class="contacts__link" aria-label="Войти">
-                    <svg width="40" height="40" class="contacts__link--image">
-                      <use xlink:href="img/icons.svg#profile"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-              <div class="side__menu-bottom">
-                <div class="side__menu-bottom-contacts">
-                  <a href="#" class="side__menu-bottom-mail">mail@cps.com</a>
-                  <a href="#" class="side__menu-bottom-phone">8 800 890 8900</a>
-                </div>
-                <ul class="side__menu-bottom-languages">
-                  <li class="side__menu-bottom-language">
-                    <a href="#" class="side__menu-bottom-language_link language-active">ru</a>
-                  </li>
-                  <li class="side__menu-bottom-language">
-                    <a href="#" class="side__menu-bottom-language_link">en</a>
-                  </li>
-                  <li class="side__menu-bottom-language">
-                    <a href="#" class="side__menu-bottom-language_link">ch</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
           <nav class="header__navigation">
             <ul class="contacts__list">
-              <li class="contacts__item header__navigation-item">
-                <a href="#" class="contacts__link callback" aria-label="Заказать звонок">
+              <li class="contacts__item">
+                <a href="#" class="contacts__link contacts__link--callback" aria-label="Заказать звонок">
                   <svg width="40" height="40" class="contacts__link_image">
                     <use xlink:href="img/icons.svg#call"></use>
                   </svg>
                 </a>
               </li>
-              <li class="contacts__item header__navigation-item">
-                <a href="#" class="contacts__link feedback" aria-label="Написать в чат">
+              <li class="contacts__item">
+                <a href="#" class="contacts__link contacts__link--feedback" aria-label="Написать в чат">
                   <svg width="40" height="40" class="contacts__link--image">
                     <use xlink:href="img/icons.svg#chat"></use>
                   </svg>
                 </a>
               </li>
-              <li class="contacts__item header__navigation-item">
+              <li class="contacts__item">
                 <a href="#" class="contacts__link" aria-label="Войти">
                   <svg width="40" height="40" class="contacts__link--image">
                     <use xlink:href="img/icons.svg#profile"></use>
@@ -127,7 +47,7 @@
               </li>
             </ul>
             <ul class="informations__list">
-              <li class="informations__item header__navigation-item">
+              <li class="informations__item">
                 <a href="#" class="informations__link" aria-label="Оставить заявку">
                   <span class="informations__link--text">Оставить заявку</span>
                   <svg width="40" height="40" class="informations__link--image">
@@ -135,7 +55,7 @@
                   </svg>
                 </a>
               </li>
-              <li class="informations__item header__navigation-item">
+              <li class="informations__item">
                 <a href="#" class="informations__link" aria-label="Статус ремонта">
                   <span class="informations__link--text">Статус ремонта</span>
                   <svg width="40" height="40" class="informations__link--image">
@@ -145,12 +65,95 @@
               </li>
             </ul>
           </nav>
+
+          <div class="side-menu">
+              <div class="side-menu__header">
+                <div class="side-menu__close-menu">
+                <button class="side-menu__toggle-btn button button--menu" aria-label="Меню"></button>
+                <div class="side-menu__logo logo">
+                  <a href="#" class="side-menu__logo-link logo__link">
+                    <img class="logo__image side-menu__logo-image" src="img/logo.png" alt="logo" width="97" height="51">
+                  </a>
+                </div>
+              </div>
+              <a href="#" class="side-menu__search" aria-label="Поиск">
+                <svg width="40" height="40" class="side-menu__search-image">
+                  <use xlink:href="img/icons.svg#search"></use>
+                </svg>
+              </a>
+            </div>
+            <nav class="side-menu__navigation">
+              <ul class="side-menu__list">
+                <li class="side-menu__item">
+                  <a href="#" class="side-menu__link">Ремонт техники</a>
+                </li>
+                <li class="side-menu__item">
+                  <a href="#" class="side-menu__link">Услуги и сервисы</a>
+                </li>
+                <li class="side-menu__item">
+                  <a href="#" class="side-menu__link">Корпоративным клиент</a>
+                </li>
+                <li class="side-menu__item">
+                  <a href="#" class="side-menu__link">Продавцам техники</a>
+                </li>
+                <li class="side-menu__item">
+                  <a href="#" class="side-menu__link">Партнерам</a>
+                </li>
+                <li class="side-menu__item">
+                  <a href="#" class="side-menu__link">Производителям</a>
+                </li>
+                <li class="side-menu__item">
+                  <a href="#" class="side-menu__link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="contacts__list side-menu__contacts">
+              <li class="contacts__item">
+                <a href="#" class="contacts__link contacts__link--callback" aria-label="Заказать звонок">
+                  <svg width="40" height="40" class="contacts__link_image">
+                    <use xlink:href="img/icons.svg#call"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a href="#" class="contacts__link contacts__link--feedback" aria-label="Написать в чат">
+                  <svg width="40" height="40" class="contacts__link--image">
+                    <use xlink:href="img/icons.svg#chat"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a href="#" class="contacts__link" aria-label="Войти">
+                  <svg width="40" height="40" class="contacts__link--image">
+                    <use xlink:href="img/icons.svg#profile"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <div class="side-menu__bottom">
+              <div class="side-menu__bottom-contacts">
+                <a href="#" class="side-menu__bottom-mail">mail@cps.com</a>
+                <a href="#" class="side-menu__bottom-phone">8 800 890 8900</a>
+              </div>
+              <ul class="side-menu__bottom-languages">
+                <li class="side-menu__bottom-language">
+                  <a href="#" class="side-menu__bottom-language_link language-active">ru</a>
+                </li>
+                <li class="side-menu__bottom-language">
+                  <a href="#" class="side-menu__bottom-language_link">en</a>
+                </li>
+                <li class="side-menu__bottom-language">
+                  <a href="#" class="side-menu__bottom-language_link">ch</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
     </header>
 
     <div class="content__wrapper">
       <main class="main">
-        <div class="wrapper__open-menu"></div>
+        <div class="main__wrapper-open-menu"></div>
         <h2 class="main__title title">Услуги и сервисы</h2>
         <nav class="main__navigation">
           <ul class="main__navigation-list">
@@ -416,8 +419,7 @@
 
     </div>
 
-    <div class="modal modal__feedback">
-      <div class="modal__feedback-wrapper"></div>
+    <div class="modal modal_feedback">
       <button class="modal__close modal__close-feedback" aria-label="Закрыть модальное окно"></button>
       <h2 class="modal__title title">Обратная связь</h2>
       <form class="form" action="#" method="post">
@@ -446,8 +448,7 @@
     </div>
   
   
-    <div class="modal modal__callback">
-      <div class="modal__callback-wrapper"></div>
+    <div class="modal modal_callback">      
       <button class="modal__close modal__close-callback" aria-label="Закрыть модальное окно"></button>
       <h2 class="modal__title title">Заказать звонок</h2>
       <form class="form" action="#" method="post">
@@ -470,7 +471,9 @@
 
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  
+  <script src="js/swiper.js"></script>
+  <script src="js/open-windows.js"></script>
+  <script src="js/open-more.js"></script>
 <script type="text/javascript" src="./js/bundle.js"></script></body>
 
 </html>
