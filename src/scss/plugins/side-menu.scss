@@ -128,6 +128,22 @@
   color: #7E7E82;
 }
 
+@media (min-width: 360px){
+  .side-menu__header {
+    padding: 17px 24px;
+  }
+
+  .side-menu__link,
+  .side-menu__contacts,
+  .side-menu__bottom {
+    padding-left: 24px;
+  }
+
+  .side-menu__link:active {
+    padding-left: 20px;
+  }
+}
+
 @media (min-width: 768px) {
   .side-menu {
     width: 320px;
