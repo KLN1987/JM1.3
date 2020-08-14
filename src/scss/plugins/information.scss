@@ -3,7 +3,7 @@
   align-items: center;
 }
 
-.information__list-open-menu {
+.information__list-menu--active {
   display: none;
 }
 
@@ -29,6 +29,10 @@
   line-height: 24px;
   letter-spacing: -0.2px;
   color: #1B1C21;
+}
+
+.informations__item:not(:last-child) {
+  margin-right: 16px;
 }
 
 @media (min-width: 768px) {

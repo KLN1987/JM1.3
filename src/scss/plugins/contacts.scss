@@ -2,6 +2,10 @@
   display: none;
 }
 
+.contacts__item:not(:last-child) {
+  margin-right: 16px;
+}
+
 @media (min-width: 768px) {
   .contacts__list {
     display: flex;

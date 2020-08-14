@@ -4,7 +4,7 @@
   height: 40px;
 }
 
-.header__navigation-toggle-btn-close {
+.side-menu__toggle-btn {
   background: url('../img/burger-close.svg') no-repeat 0 0;
   width: 40px;
   height: 40px;
@@ -28,34 +28,8 @@
   padding: 16px;
 }
 
-.header__main {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 320px;
-  z-index: 999;
-}
-
-.header__top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
 .header__open-menu {
   display: flex;
-  align-items: center;
-}
-
-.header__top-open-menu {
-  display: flex;
-  align-items: center;
-}
-
-.header__top-search {
-  display: none;
   align-items: center;
 }
 
@@ -65,44 +39,8 @@
   height: 40px;
 }
 
-.header__navigation-item:not(:last-child) {
-  margin-right: 16px;
-}
-
 .header__navigation:last-child {
   margin-right: 0;
-}
-
-.header__search-list {
-  z-index: -1;
-  position: absolute;
-  transform: translateX(-1300%);
-  -webkit-transform: translateX(-1300%);
-  -moz-transform: translateX(-1300%);
-  -ms-transform: translateX(-1300%);
-  -o-transform: translateX(-1300%);
-  transition: transform 0.2s;
-  -webkit-transition: transform 0.2s;
-  -moz-transition: transform 0.2s;
-  -ms-transition: transform 0.2s;
-  -o-transition: transform 0.2s;
-}
-
-.header__search-list-open {
-  z-index: 0;
-  display: flex;
-  align-items: center;
-  position: relative;
-  transform: translateX(0%);
-  -webkit-transform: translateX(0%);
-  -moz-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  -o-transform: translateX(0%);
-}
-
-.header__search-link {
-  display: flex;
-  align-items: center;
 }
 
 @media (min-width: 768px) {
@@ -139,37 +77,16 @@
     padding-bottom: 0;
   }
 
-  .header__main {
-    padding: 0;
-    flex-direction: column;
-  }
-
   .header__logo {
     margin: 0;
   }
 
-  .header__logo::before {
+  .header__open-menu {
     display: none;
-  }
-
-  .header__navigation-toggle-btn {
-    display: none;
-  }
-
-  .header__search-list {
-    display: flex;
-    transform: translate(700%);
-    -webkit-transform: translate(700%);
-    -moz-transform: translate(700%);
-    -ms-transform: translate(700%);
-    -o-transform: translate(700%);
   }
 
   .header__wrapper {
-    padding-top: 30px;
+    padding: 0;
   }
 
-  .header__search-list-open {
-    position: absolute;
-  }
 }

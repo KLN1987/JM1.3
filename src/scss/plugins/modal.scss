@@ -1,35 +1,23 @@
 .modal {
-  max-width: 440px;
-  background: #FFFFFF;
-  box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+  width: 0%;
+  height: 100%;
   position: absolute;
+  background: #fff;
+  max-width: 440px;
   top: 0;
   right: 0;
+  overflow: hidden;
+  transition: 0.2s linear;
+  -webkit-transition: 0.2s linear;
+  -moz-transition: 0.2s linear;
+  -ms-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+}
+
+.modal_feedback--active,
+.modal_callback--active {
+  width: 100%;
   z-index: 999;
-  height: 100%;
-}
-
-.modal__feedback,
-.modal__callback {
-  transform: translateY(-150%);
-  -webkit-transform: translateY(-150%);
-  -moz-transform: translateY(-150%);
-  -ms-transform: translateY(-150%);
-  -o-transform: translateY(-150%);
-  transition: transform 0.3s;
-  -webkit-transition: transform 0.3s;
-  -moz-transition: transform 0.3s;
-  -ms-transition: transform 0.3s;
-  -o-transition: transform 0.3s;
-}
-
-.modal__feedback-open,
-.modal__callback-open {
-  transform: translateY(0%);
-  -webkit-transform: translateY(0%);
-  -moz-transform: translateY(0%);
-  -ms-transform: translateY(0%);
-  -o-transform: translateY(0%);
 }
 
 .modal__close {

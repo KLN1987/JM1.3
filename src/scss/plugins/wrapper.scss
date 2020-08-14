@@ -1,4 +1,4 @@
-.wrapper__open-menu-bg {
+.main__wrapper-open-menu--active {
   z-index: 9;
   position: absolute;
   top: 0;
@@ -10,7 +10,7 @@
 }
 
 @media (min-width: 1440px) {
-  .wrapper__open-menu-bg {
+  .main__wrapper-open-menu--active {
     z-index: -1;
   }
 }
