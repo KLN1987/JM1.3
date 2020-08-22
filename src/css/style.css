@@ -37,13 +37,15 @@ ul {
 
 body {
   font-family: 'TTLAkes', sans-serif;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .container {
   min-width: 320px;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
+  
 }
 
 .header__navigation-toggle-btn {
@@ -473,7 +475,6 @@ body {
   color: #7E7E82;
 }
 
-
 .overlay--active {
   z-index: 9;
   position: absolute;
@@ -660,11 +661,11 @@ body {
   position: absolute;
   background: #fff;
   max-width: 440px;
-  transform: translateX(200%);
-  -webkit-transform: translateX(200%);
-  -moz-transform: translateX(200%);
-  -ms-transform: translateX(200%);
-  -o-transform: translateX(200%);
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
   top: 0;
   right: 0;
   transition: transform 0.2s;
@@ -1014,7 +1015,7 @@ body {
 
   .main {
     padding-top: 42px;
-    width: 67%;
+    width: 1120px;
   }
 
   .main__header {
@@ -1100,7 +1101,7 @@ body {
   .side-menu {
     display: block;
     position: initial;
-    width: 23%;
+    width: 320px;
     box-shadow: none;
     transform: translateX(0%);
     -webkit-transform: translateX(0%);
