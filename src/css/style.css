@@ -474,7 +474,7 @@ body {
 }
 
 
-.main__wrapper-open-menu--active {
+.overlay--active {
   z-index: 9;
   position: absolute;
   top: 0;
@@ -1014,7 +1014,7 @@ body {
 
   .main {
     padding-top: 42px;
-    width: 1120px;
+    width: 67%;
   }
 
   .main__header {
@@ -1100,7 +1100,7 @@ body {
   .side-menu {
     display: block;
     position: initial;
-    width: 320px;
+    width: 23%;
     box-shadow: none;
     transform: translateX(0%);
     -webkit-transform: translateX(0%);
@@ -1140,9 +1140,8 @@ body {
     display: flex;
   }
 
-  .main__wrapper-open-menu--active {
+  .overlay--active {
     z-index: -1;
   }
-
 }
 

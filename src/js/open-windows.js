@@ -1,7 +1,7 @@
 const navigationOpenBtn = document.querySelector('.header__navigation-toggle-btn');
 const navigationCloseBtn = document.querySelector('.side-menu__toggle-btn');
 const sideMenu = document.querySelector('.side-menu');
-const wrapperOpenMenu = document.querySelector('.main__wrapper-open-menu');
+const wrapperOpenMenu = document.querySelector('.overlay');
 
 const modalFeedbackOpenBtn = document.querySelectorAll('.contacts__link--feedback');
 const modalFeedback = document.querySelector('.modal_feedback');
@@ -17,14 +17,14 @@ const callbackInputFocus = modalCallback.querySelector('.form__input');
 // открывает боковое меню
 function openedSideMenu() {
   sideMenu.classList.add('side-menu__active');
-  wrapperOpenMenu.classList.add('main__wrapper-open-menu--active');
+  wrapperOpenMenu.classList.add('overlay--active');
   document.addEventListener('keydown', escapeKeydownHandler);
 }
 
 // закрывает боковое меню
 function closedSideMenu() {
   sideMenu.classList.remove('side-menu__active');
-  wrapperOpenMenu.classList.remove('main__wrapper-open-menu--active');
+  wrapperOpenMenu.classList.remove('overlay--active');
 }
  
 //функции для модалок
@@ -32,14 +32,14 @@ function closeModalBg() {
   if (sideMenu.classList.contains('side-menu__active')) {
     wrapperOpenMenu.style.zIndex = '9';
  } else {
-  wrapperOpenMenu.classList.remove('main__wrapper-open-menu--active');
+  wrapperOpenMenu.classList.remove('overlay--active');
   wrapperOpenMenu.removeAttribute('style');
   }
 }
 
 function feedbackBtnOpenHandler() {
   modalFeedback.classList.add('modal_feedback--active');
-  wrapperOpenMenu.classList.add('main__wrapper-open-menu--active');
+  wrapperOpenMenu.classList.add('overlay--active');
   wrapperOpenMenu.style.zIndex = '99';
   feedbackInputFocus.focus();
   document.addEventListener('keydown', escapeKeydownHandler);
@@ -47,7 +47,7 @@ function feedbackBtnOpenHandler() {
 
 function callbackBtnOpenHandler() {
   modalCallback.classList.add('modal_callback--active');
-  wrapperOpenMenu.classList.add('main__wrapper-open-menu--active');
+  wrapperOpenMenu.classList.add('overlay--active');
   wrapperOpenMenu.style.zIndex = '99';
   callbackInputFocus.focus();
   document.addEventListener('keydown', escapeKeydownHandler);
