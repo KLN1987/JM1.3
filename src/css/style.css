@@ -1014,6 +1014,7 @@ body {
 
   .main {
     padding-top: 42px;
+    width: 1120px;
   }
 
   .main__header {
