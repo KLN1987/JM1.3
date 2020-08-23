@@ -14,6 +14,8 @@ const modalCallbackCloseBtn = document.querySelector('.modal__close-callback');
 const feedbackInputFocus = modalFeedback.querySelector('.form__input');
 const callbackInputFocus = modalCallback.querySelector('.form__input');
 
+const ESCAPE_KAYDOWN = 27;
+
 // открывает боковое меню
 function openedSideMenu() {
   sideMenu.classList.add('side-menu__active');
@@ -85,7 +87,7 @@ function closeModal() {
 
 //закрытие на ESC
 function escapeKeydownHandler(evt) {
-  if (evt.keyCode === 27) {
+  if (evt.keyCode === ESCAPE_KAYDOWN) {
     closeModal();
   }
 };
