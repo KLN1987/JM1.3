@@ -14,7 +14,7 @@ const modalCallbackCloseBtn = document.querySelector('.modal__close-callback');
 const feedbackInputFocus = modalFeedback.querySelector('.form__input');
 const callbackInputFocus = modalCallback.querySelector('.form__input');
 
-const ESCAPE_KAYDOWN = 27;
+const ESCAPE_KЕYDOWN = 27;
 
 // открывает боковое меню
 function openedSideMenu() {
@@ -30,6 +30,8 @@ function closedSideMenu() {
 }
  
 //функции для модалок
+
+//функция закрытия при клике на фон/ESC
 function closeModalBg() {
   if (sideMenu.classList.contains('side-menu__active')) {
     overlay.style.zIndex = '9';
@@ -39,6 +41,7 @@ function closeModalBg() {
   }
 }
 
+//открывает модальное окно с обратной связью
 function feedbackBtnOpenHandler() {
   modalFeedback.classList.add('modal_feedback--active');
   overlay.classList.add('overlay--active');
@@ -47,6 +50,7 @@ function feedbackBtnOpenHandler() {
   document.addEventListener('keydown', escapeKeydownHandler);
 }
 
+//открывает модальное окно с обратным звонком
 function callbackBtnOpenHandler() {
   modalCallback.classList.add('modal_callback--active');
   overlay.classList.add('overlay--active');
@@ -55,23 +59,17 @@ function callbackBtnOpenHandler() {
   document.addEventListener('keydown', escapeKeydownHandler);
 }
 
+//закрывает модальное окно с обратной связью
 function modalFeedbackCloseBtnHandler() {
   modalFeedback.classList.remove('modal_feedback--active');
   closeModalBg();
 }
 
+//закрывает модальное окно с обратным звонком
 function modalCallbackCloseBtnHandler() {
   modalCallback.classList.remove('modal_callback--active');
   closeModalBg();
 }
-
-for (let j = 0; j < modalFeedbackOpenBtn.length; j++) {
-  modalFeedbackOpenBtn[j].addEventListener('click',feedbackBtnOpenHandler);
-}
-
-for (let i = 0; i < modalCallbackOpenBtn.length; i++) {
-  modalCallbackOpenBtn[i].addEventListener('click', callbackBtnOpenHandler)
-} 
 
 //фнкция закрытия при esc и клике по фону
 function closeModal() {
@@ -87,7 +85,7 @@ function closeModal() {
 
 //закрытие на ESC
 function escapeKeydownHandler(evt) {
-  if (evt.keyCode === ESCAPE_KAYDOWN) {
+  if (evt.keyCode === ESCAPE_KЕYDOWN) {
     closeModal();
   }
 };
@@ -97,5 +95,12 @@ navigationCloseBtn.addEventListener('click', closedSideMenu);
 
 overlay.addEventListener('click', closeModal);
 
+for (let j = 0; j < modalFeedbackOpenBtn.length; j++) {
+  modalFeedbackOpenBtn[j].addEventListener('click',feedbackBtnOpenHandler);
+}
+
+for (let i = 0; i < modalCallbackOpenBtn.length; i++) {
+  modalCallbackOpenBtn[i].addEventListener('click', callbackBtnOpenHandler)
+} 
 modalCallbackCloseBtn.addEventListener('click', modalCallbackCloseBtnHandler);
 modalFeedbackCloseBtn.addEventListener('click', modalFeedbackCloseBtnHandler);
