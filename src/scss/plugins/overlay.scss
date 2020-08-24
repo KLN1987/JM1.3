@@ -1,5 +1,5 @@
-.overlay--active {
-  z-index: 9;
+.overlay {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -9,8 +9,15 @@
   opacity: 0.96;
 }
 
-@media (min-width: 1440px) {
-  .overlay--active {
-    z-index: -1;
-  }
+.overlay-menu {
+  z-index: 9;
+}
+
+.overlay-modal {
+  z-index: 99;
+}
+
+.overlay-modal--active,
+.overlay-menu--active {
+  display: block;
 }

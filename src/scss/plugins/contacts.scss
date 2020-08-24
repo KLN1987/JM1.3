@@ -1,4 +1,4 @@
-.contacts__list {
+.contacts {
   display: none;
 }
 
@@ -7,7 +7,7 @@
 }
 
 @media (min-width: 768px) {
-  .contacts__list {
+  .contacts {
     display: flex;
     align-items: center;
   }
@@ -19,7 +19,7 @@
 }
 
 @media (min-width: 1440px) {
-  .contacts__list {
+  .contacts {
     display: none;
   }
 }

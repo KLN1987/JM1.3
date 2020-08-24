@@ -103,7 +103,7 @@ body {
   background-color: inherit;
 }
 
-.informations__list {
+.informations {
   display: flex;
   align-items: center;
 }
@@ -112,7 +112,7 @@ body {
   display: none;
 }
 
-.informations__list::before {
+.informations::before {
   content: '';
   display: inline-block;
   background: #EAEAEA;
@@ -261,7 +261,7 @@ body {
   -o-transform: rotate(180deg);
 }
 
-.contacts__list {
+.contacts {
   display: none;
 }
 
@@ -458,25 +458,27 @@ body {
   margin-right: 7px;
 }
 
-.side-menu__bottom-language_link {
+.side-menu__bottom-language_btn {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
   color: #1B1C21;
   text-transform: uppercase;
+  border: none;
+  background: inherit;
 }
 
-.side-menu__bottom-language_link:hover {
+.side-menu__bottom-language_btn:hover {
   opacity: 0.6;
 }
 
-.side-menu__bottom-language_link:active,
+.side-menu__bottom-language_btn:active,
 .language-active {
   color: #7E7E82;
 }
 
-.overlay--active {
-  z-index: 9;
+.overlay {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -484,6 +486,19 @@ body {
   height: 100%;
   background: #FFFFFF;
   opacity: 0.96;
+}
+
+.overlay-menu {
+  z-index: 9;
+}
+
+.overlay-modal {
+  z-index: 99;
+}
+
+.overlay-modal--active,
+.overlay-menu--active {
+  display: block;
 }
 
 .brands__link {
@@ -657,7 +672,7 @@ body {
 }
 
 .modal {
-  height: 100%;
+  height: 940px;
   position: absolute;
   background: #fff;
   max-width: 440px;
@@ -675,8 +690,8 @@ body {
   -o-transition: transform 0.2s;
 }
 
-.modal_feedback--active,
-.modal_callback--active {
+.modal-feedback--active,
+.modal-callback--active {
   transform: translateX(0%);
   -webkit-transform: translateX(0%);
   -moz-transform: translateX(0%);
@@ -685,7 +700,6 @@ body {
   z-index: 999;
   box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
 }
-
 
 .modal__close {
   background: url('../img/burger-close.svg') no-repeat 0 0;
@@ -823,7 +837,7 @@ body {
     padding: 24px;
   }
 
-  .contacts__list {
+  .contacts {
    display: flex;
    align-items: center;
  }
@@ -862,7 +876,7 @@ body {
     padding-bottom: 16px;
   }
 
-  .informations__list::before {
+  .informations::before {
     margin-left: 20px;
   }
 
@@ -1070,7 +1084,7 @@ body {
     margin-right: 30px;
   }
 
-  .informations__list {
+  .informations {
     position: absolute;
     top: 42px;
     right: 30px;
@@ -1081,7 +1095,7 @@ body {
     display: block;
   }
 
-  .informations__list::before {
+  .informations::before {
     display: none;
   }
 
@@ -1132,7 +1146,7 @@ body {
     padding: 32px 31px 21px 31px;
   }
 
-  .contacts__list {
+  .contacts {
     display: none;
   }
 
@@ -1140,8 +1154,5 @@ body {
     display: flex;
   }
 
-  .overlay--active {
-    z-index: -1;
-  }
 }
 

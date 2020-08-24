@@ -111,19 +111,21 @@
   margin-right: 7px;
 }
 
-.side-menu__bottom-language_link {
+.side-menu__bottom-language_btn {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
   color: #1B1C21;
   text-transform: uppercase;
+  border: none;
+  background: inherit;
 }
 
-.side-menu__bottom-language_link:hover {
+.side-menu__bottom-language_btn:hover {
   opacity: 0.6;
 }
 
-.side-menu__bottom-language_link:active,
+.side-menu__bottom-language_btn:active,
 .language-active {
   color: #7E7E82;
 }

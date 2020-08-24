@@ -1,4 +1,4 @@
-.informations__list {
+.informations {
   display: flex;
   align-items: center;
 }
@@ -7,7 +7,7 @@
   display: none;
 }
 
-.informations__list::before {
+.informations::before {
   content: '';
   display: inline-block;
   background: #EAEAEA;
@@ -36,13 +36,13 @@
 }
 
 @media (min-width: 768px) {
-  .informations__list::before {
+  .informations::before {
     margin-left: 20px;
   }
 }
 
 @media (min-width: 1440px) {
-  .informations__list {
+  .informations {
     position: absolute;
     top: 42px;
     right: 30px;
@@ -53,7 +53,7 @@
     display: block;
   }
 
-  .informations__list::before {
+  .informations::before {
     display: none;
   }
 }
