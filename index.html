@@ -23,7 +23,7 @@
               </div>
             </div>
           <nav class="header__navigation">
-            <ul class="contacts__list">
+            <ul class="contacts">
               <li class="contacts__item">
                 <a href="#" class="contacts__link contacts__link--callback" aria-label="Заказать звонок">
                   <svg width="40" height="40" class="contacts__link_image">
@@ -46,7 +46,7 @@
                 </a>
               </li>
             </ul>
-            <ul class="informations__list">
+            <ul class="informations">
               <li class="informations__item">
                 <a href="#" class="informations__link" aria-label="Оставить заявку">
                   <span class="informations__link--text">Оставить заявку</span>
@@ -109,7 +109,7 @@
         </li>
       </ul>
     </nav>
-    <ul class="contacts__list side-menu__contacts">
+    <ul class="contacts side-menu__contacts">
       <li class="contacts__item">
         <a href="#" class="contacts__link contacts__link--callback" aria-label="Заказать звонок">
           <svg width="40" height="40" class="contacts__link_image">
@@ -139,13 +139,13 @@
       </div>
       <ul class="side-menu__bottom-languages">
         <li class="side-menu__bottom-language">
-          <a href="#" class="side-menu__bottom-language_link language-active">ru</a>
+          <button class="side-menu__bottom-language_btn language-active">ru</button>
         </li>
         <li class="side-menu__bottom-language">
-          <a href="#" class="side-menu__bottom-language_link">en</a>
+          <button class="side-menu__bottom-language_btn">en</button>
         </li>
         <li class="side-menu__bottom-language">
-          <a href="#" class="side-menu__bottom-language_link">ch</a>
+          <button class="side-menu__bottom-language_btn">ch</button>
         </li>
       </ul>
     </div>
@@ -153,7 +153,6 @@
 
     <div class="content__wrapper">
       <main class="main">
-        <div class="overlay"></div>
         <h2 class="main__title title">Услуги и сервисы</h2>
         <nav class="main__navigation">
           <ul class="main__navigation-list">
@@ -418,9 +417,11 @@
       </footer>
     </div>
 
+    <div class="overlay overlay-menu"></div>
+    <div class="overlay overlay-modal"></div>
   </div>
 
-   <div class="modal modal_feedback">
+   <div class="modal modal-feedback">
       <button class="modal__close modal__close-feedback" aria-label="Закрыть модальное окно"></button>
       <h2 class="modal__title title">Обратная связь</h2>
       <form class="form" action="#" method="post">
@@ -446,7 +447,7 @@
     </div>
   
   
-    <div class="modal modal_callback">      
+    <div class="modal modal-callback">      
       <button class="modal__close modal__close-callback" aria-label="Закрыть модальное окно"></button>
       <h2 class="modal__title title">Заказать звонок</h2>
       <form class="form" action="#" method="post">
