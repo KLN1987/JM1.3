@@ -1,31 +1,33 @@
-const navigationOpenBtn = document.querySelector('.header__navigation-toggle-btn');
-const navigationCloseBtn = document.querySelector('.side-menu__toggle-btn');
-const sideMenu = document.querySelector('.side-menu');
-const overlayMenu = document.querySelector('.overlay-menu');
+var navigationOpenBtn = document.querySelector('.header__navigation-toggle-btn');
+var navigationCloseBtn = document.querySelector('.side-menu__toggle-btn');
+var sideMenu = document.querySelector('.side-menu');
+var overlayMenu = document.querySelector('.overlay--menu');
 
-const ESCAPE_KЕYDOWN = 27;
+const WIDTH_SCREEN = 1440;
+
 
 // открывает боковое меню
-function openedSideMenu() {
-  sideMenu.classList.add('side-menu__active');
-  overlayMenu.classList.add('overlay-menu--active');
-  document.addEventListener('keydown', escapeKeydownHandler);
+function sideMenuModalOpenButtonClickHanlder() {
+  sideMenu.classList.add('side-menu--active');
+  overlayMenu.classList.add('overlay--active');
 }
 
 // закрывает боковое меню
-function closedSideMenu() {
-  sideMenu.classList.remove('side-menu__active');
-  overlayMenu.classList.remove('overlay-menu--active');
+function sideMenuModalCloseButtonClickHanlder() {
+  sideMenu.classList.remove('side-menu--active');
+  overlayMenu.classList.remove('overlay--active');
 }
 
-//закрытие на ESC
-function escapeKeydownHandler(evt) {
-  if (evt.keyCode === ESCAPE_KЕYDOWN) {
-    closedSideMenu();
+//убирает все классы сайд-меню на десктопе
+function removeClass() {
+  if(window.innerWidth >= WIDTH_SCREEN) {
+    sideMenuModalCloseButtonClickHanlder();
   }
-};
- 
+}
+removeClass();
+
 //слушатели
-navigationOpenBtn.addEventListener('click', openedSideMenu);
-navigationCloseBtn.addEventListener('click', closedSideMenu);
-overlayMenu.addEventListener('click', closedSideMenu);
+navigationOpenBtn.addEventListener('click', sideMenuModalOpenButtonClickHanlder);
+navigationCloseBtn.addEventListener('click', sideMenuModalCloseButtonClickHanlder);
+overlayMenu.addEventListener('click', sideMenuModalCloseButtonClickHanlder);
+window.addEventListener('resize', removeClass);

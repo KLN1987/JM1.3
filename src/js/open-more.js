@@ -4,6 +4,9 @@ const mainDescriptionReadMore = document.querySelector('.main__description-read-
 const mainDescriptionSize = document.querySelector('.main__description-size');
 const mainDescriptionItem = document.querySelector('.main__description-item');
 
+const SCREEN_WIDTH = 768;
+const MAX_HEIGHT_DESCRIPTION = 176 + 'px';
+
 for (let i = 0; i < btnShowAll.length; i++) {
 btnShowAll[i].addEventListener('click', function() { 
   if (!btnShowAll[i].classList.contains('show-all')) {
@@ -11,7 +14,7 @@ btnShowAll[i].addEventListener('click', function() {
   btnShowAll[i].classList.add('show-all');
   btnShowAll[i].textContent = 'Скрыть';
   } else {
-    sectionList[i].style.height = '176px';
+    sectionList[i].style.height = MAX_HEIGHT_DESCRIPTION;
     btnShowAll[i].classList.remove('show-all');
     btnShowAll[i].textContent = 'Показать все';
     }
@@ -31,8 +34,8 @@ mainDescriptionReadMore.addEventListener('click', function() {
 });
 
 function openReadMore() {
-  if(window.innerWidth >= '768') {
-    mainDescriptionSize.style.height = '176px';
+  if(window.innerWidth >= SCREEN_WIDTH) {
+    mainDescriptionSize.style.height = MAX_HEIGHT_DESCRIPTION;
   } else {
     mainDescriptionSize.style.height = mainDescriptionItem.clientHeight + 'px';
   }

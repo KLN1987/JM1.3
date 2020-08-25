@@ -12,7 +12,7 @@
 
 @media (min-width: 1440px) {
   .container {
-    width: 1440px;
+    min-width: 1440px;
     display: flex;
   }
 }

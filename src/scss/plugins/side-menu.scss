@@ -18,7 +18,7 @@
   -o-transition: transform 0.2s;
 }
 
-.side-menu__active {
+.side-menu--active {
   z-index: 10;
   box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
   transform: translateX(0%);
@@ -164,7 +164,7 @@
   .side-menu {
     display: block;
     position: initial;
-    width: 320px;
+    width: 100%;
     box-shadow: none;
     transform: translateX(0%);
     -webkit-transform: translateX(0%);

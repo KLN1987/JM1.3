@@ -9,15 +9,14 @@
   opacity: 0.96;
 }
 
-.overlay-menu {
+.overlay--menu {
   z-index: 9;
 }
 
-.overlay-modal {
+.overlay--modal {
   z-index: 99;
 }
 
-.overlay-modal--active,
-.overlay-menu--active {
+.overlay--active {
   display: block;
 }
