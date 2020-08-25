@@ -43,7 +43,7 @@ body {
 
 @media (min-width: 1440px) {
   .container {
-    width: 1440px;
+    min-width: 1440px;
     display: flex; } }
 
 .header__navigation-toggle-btn {
@@ -357,7 +357,7 @@ body {
 @media (min-width: 1440px) {
   .main {
     padding-top: 42px;
-    width: 1120px; }
+    width: 100%; }
   .main__header {
     display: flex;
     align-items: center;
@@ -466,7 +466,7 @@ body {
   -ms-transition: transform 0.2s;
   -o-transition: transform 0.2s; }
 
-.side-menu__active {
+.side-menu--active {
   z-index: 10;
   box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
   transform: translateX(0%);
@@ -582,7 +582,7 @@ body {
   .side-menu {
     display: block;
     position: initial;
-    width: 320px;
+    width: 100%;
     box-shadow: none;
     transform: translateX(0%);
     -webkit-transform: translateX(0%);
@@ -613,14 +613,13 @@ body {
   background: #FFFFFF;
   opacity: 0.96; }
 
-.overlay-menu {
+.overlay--menu {
   z-index: 9; }
 
-.overlay-modal {
+.overlay--modal {
   z-index: 99; }
 
-.overlay-modal--active,
-.overlay-menu--active {
+.overlay--active {
   display: block; }
 
 .brands__link {
@@ -833,7 +832,7 @@ body {
     padding: 32px 31px 21px 31px; } }
 
 .modal {
-  height: 940px;
+  height: 100%;
   position: absolute;
   background: #fff;
   max-width: 440px;
