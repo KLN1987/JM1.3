@@ -36,8 +36,7 @@ body {
 .container {
   min-width: 320px;
   margin: 0 auto;
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
 
 @media (min-width: 768px) {
   .container {
