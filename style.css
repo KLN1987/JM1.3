@@ -30,7 +30,8 @@ ul {
 body {
   font-family: 'TTLAkes', sans-serif;
   overflow-x: hidden;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
 
 .container {
   min-width: 320px;
