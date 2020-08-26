@@ -39,6 +39,7 @@ body {
   font-family: 'TTLAkes', sans-serif;
   width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 
 .container {
