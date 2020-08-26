@@ -851,7 +851,8 @@ body {
   -ms-transition: transform 0.2s;
   -o-transition: transform 0.2s; }
 
-.modal--active {
+.modal-callback--active,
+.modal-feedback--active {
   transform: translateX(0%);
   -webkit-transform: translateX(0%);
   -moz-transform: translateX(0%);
