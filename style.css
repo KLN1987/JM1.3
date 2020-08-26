@@ -36,7 +36,8 @@ body {
 .container {
   min-width: 320px;
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 @media (min-width: 768px) {
   .container {
@@ -850,8 +851,7 @@ body {
   -ms-transition: transform 0.2s;
   -o-transition: transform 0.2s; }
 
-.modal-feedback--active,
-.modal-callback--active {
+.modal--active {
   transform: translateX(0%);
   -webkit-transform: translateX(0%);
   -moz-transform: translateX(0%);
