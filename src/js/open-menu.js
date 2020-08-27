@@ -1,33 +1,56 @@
-var navigationOpenBtn = document.querySelector('.header__navigation-toggle-btn');
-var navigationCloseBtn = document.querySelector('.side-menu__toggle-btn');
-var sideMenu = document.querySelector('.side-menu');
-var overlayMenu = document.querySelector('.overlay--menu');
+const sideMenuOpenBtn = document.querySelector('.header__side-menu-open-btn');
+const sideMenuCloseBtn = document.querySelector('.side-menu__close-btn');
+const sideMenu = document.querySelector('.side-menu');
+const overlayMenu = document.querySelector('.overlay--menu');
+const overlayModal = document.querySelector('.overlay--modal');
 
 const WIDTH_SCREEN = 1440;
+const ESC_KЕYCODE = 27;
 
+function escKeydownHandler(evt) {
+  if (evt.keyCode === ESC_KЕYCODE) {
+    console.log('bbb');
+    closeSideMenu();
+  } 
+}
 
 // открывает боковое меню
-function sideMenuModalOpenButtonClickHanlder() {
-  sideMenu.classList.add('side-menu--active');
-  overlayMenu.classList.add('overlay--active');
+function openSideMenu() {
+    sideMenu.classList.add('side-menu--active');
+    overlayMenu.classList.add('overlay--active');
+    //document.addEventListener('keydown', escKeydownHandler);
+    sideMenuCloseBtn.addEventListener('click', sideMenuModalCloseButtonClickHandler);
+    overlayMenu.addEventListener('click', sideMenuModalCloseButtonClickHandler);
 }
 
 // закрывает боковое меню
-function sideMenuModalCloseButtonClickHanlder() {
+function closeSideMenu() {
   sideMenu.classList.remove('side-menu--active');
   overlayMenu.classList.remove('overlay--active');
+  document.removeEventListener('keydown', escKeydownHandler);
+  sideMenuCloseBtn.removeEventListener('click', sideMenuModalCloseButtonClickHandler);
+  overlayMenu.removeEventListener('click', sideMenuModalCloseButtonClickHandler);
 }
 
 //убирает все классы сайд-меню на десктопе
 function removeClass() {
   if(window.innerWidth >= WIDTH_SCREEN) {
-    sideMenuModalCloseButtonClickHanlder();
+    sideMenuModalCloseButtonClickHandler();
   }
 }
-removeClass();
+
+//функции слушателей
+function sideMenuModalOpenButtonClickHandler() {
+  openSideMenu();
+}
+function sideMenuModalCloseButtonClickHandler() {
+  closeSideMenu();
+}
+function windowResizeHandler() {
+  removeClass();
+};
 
 //слушатели
-navigationOpenBtn.addEventListener('click', sideMenuModalOpenButtonClickHanlder);
-navigationCloseBtn.addEventListener('click', sideMenuModalCloseButtonClickHanlder);
-overlayMenu.addEventListener('click', sideMenuModalCloseButtonClickHanlder);
-window.addEventListener('resize', removeClass);
+sideMenuOpenBtn.addEventListener('click', sideMenuModalOpenButtonClickHandler);
+//document.addEventListener('keydown', escKeydownHandler);
+window.addEventListener('resize', windowResizeHandler);
