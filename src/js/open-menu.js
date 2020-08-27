@@ -7,20 +7,15 @@ const overlayModal = document.querySelector('.overlay--modal');
 const WIDTH_SCREEN = 1440;
 const ESC_KЕYCODE = 27;
 
-function escKeydownHandler(evt) {
-  if (evt.keyCode === ESC_KЕYCODE) {
-    console.log('bbb');
-    closeSideMenu();
-  } 
-}
+import {escKeydownHandler} from './open-modal.js';
 
 // открывает боковое меню
-function openSideMenu() {
-    sideMenu.classList.add('side-menu--active');
-    overlayMenu.classList.add('overlay--active');
-    //document.addEventListener('keydown', escKeydownHandler);
-    sideMenuCloseBtn.addEventListener('click', sideMenuModalCloseButtonClickHandler);
-    overlayMenu.addEventListener('click', sideMenuModalCloseButtonClickHandler);
+function openSideMenu() { 
+  sideMenu.classList.add('side-menu--active');
+  overlayMenu.classList.add('overlay--active');
+  document.addEventListener('keydown', escKeydownHandler);
+  sideMenuCloseBtn.addEventListener('click', sideMenuModalCloseButtonClickHandler);
+  overlayMenu.addEventListener('click', sideMenuModalCloseButtonClickHandler);
 }
 
 // закрывает боковое меню
@@ -52,5 +47,4 @@ function windowResizeHandler() {
 
 //слушатели
 sideMenuOpenBtn.addEventListener('click', sideMenuModalOpenButtonClickHandler);
-//document.addEventListener('keydown', escKeydownHandler);
 window.addEventListener('resize', windowResizeHandler);
