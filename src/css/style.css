@@ -689,8 +689,8 @@ body {
   -o-transition: transform 0.2s;
 }
 
-.modal-feedback--active,
-.modal-callback--active {
+.modal--feedback--active,
+.modal--callback--active {
   transform: translateX(0%);
   -webkit-transform: translateX(0%);
   -moz-transform: translateX(0%);
@@ -739,7 +739,7 @@ body {
   height: 118px;
 }
 
-.form__cell-design {
+.form__input--design {
   background: #FFFFFF;
   border: 1px solid #EAEAEA;
   border-radius: 8px;
@@ -747,7 +747,7 @@ body {
   margin-bottom: 16px;
 }
 
-.form__cell-design::placeholder {
+.form__input--design::placeholder {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;

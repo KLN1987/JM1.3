@@ -2,13 +2,10 @@
   border: none;
 }
 
-.form__input-wrapper {
+.form__input {
+  display: block;
   margin: 0 auto;
   width: 91%;
-}
-
-.form__input {
-  width: 100%;
 }
 
 .form__message {
@@ -18,7 +15,7 @@
   height: 118px;
 }
 
-.form__cell-design {
+.form__input--design {
   background: #FFFFFF;
   border: 1px solid #EAEAEA;
   border-radius: 8px;
@@ -26,7 +23,7 @@
   margin-bottom: 16px;
 }
 
-.form__cell-design::placeholder {
+.form__input--design::placeholder {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
