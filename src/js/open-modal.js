@@ -18,11 +18,11 @@ const ESC_KЕYCODE = 27;
 export function escKeydownHandler(evt) {
   if (evt.keyCode === ESC_KЕYCODE) {
     console.log('aaa');
-    if (modalFeedback.classList.contains('modal--feedback--active')) {
+    if (modalFeedback.classList.contains('modal--active')) {
       closeFeedbackModal();
       return;
     }
-    else if (modalCallback.classList.contains('modal--callback--active')) {
+    else if (modalCallback.classList.contains('modal--active')) {
       closeCallbackModal();
       return;
     }
@@ -38,42 +38,38 @@ export function escKeydownHandler(evt) {
 
 //открывает модальное окно с обратной связью
 function openFeedbackModal() {
-  modalFeedback.classList.add('modal--feedback--active');
+  modalFeedback.classList.add('modal--active');
   overlayModal.classList.add('overlay--active');
   feedBackModalFirstInput.focus();
   modalFeedbackCloseBtn.addEventListener('click', feedbackModalCloseButtonClickHandler);
   overlayModal.addEventListener('click', feedbackModalCloseButtonClickHandler);
   document.addEventListener('keydown', escKeydownHandler);
-  //modalCallback.style.display = 'none';
 }
 
 //закрывает модальное окно с обратной связью
 function closeFeedbackModal() {
-  modalFeedback.classList.remove('modal--feedback--active');
+  modalFeedback.classList.remove('modal--active');
   overlayModal.classList.remove('overlay--active');
   modalFeedbackCloseBtn.removeEventListener('click', feedbackModalCloseButtonClickHandler);
   overlayModal.removeEventListener('click', feedbackModalCloseButtonClickHandler);
-  //modalCallback.style.display = 'block';
 }
 
 //открывает модальное окно с обратным звонком
 function openCallbackModal() {
-  modalCallback.classList.add('modal--callback--active');
+  modalCallback.classList.add('modal--active');
   overlayModal.classList.add('overlay--active');
   callBackModalFirstInput.focus();
   modalCallbackCloseBtn.addEventListener('click', callbackModalCloseButtonClickHandler);
   overlayModal.addEventListener('click', callbackModalCloseButtonClickHandler);
   document.addEventListener('keydown', escKeydownHandler);
-  //modalFeedback.style.display = 'none';
 }
 
 //закрывает модальное окно с обратным звонком
 function closeCallbackModal() {
-  modalCallback.classList.remove('modal--callback--active');
+  modalCallback.classList.remove('modal--active');
   overlayModal.classList.remove('overlay--active');
   modalCallbackCloseBtn.removeEventListener('click', callbackModalCloseButtonClickHandler);
   overlayModal.removeEventListener('click', callbackModalCloseButtonClickHandler);
-  //modalFeedback.style.display = 'block';
 }
 
 //функции для слушателей

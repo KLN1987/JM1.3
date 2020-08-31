@@ -1,31 +1,32 @@
 .modal {
   position: absolute;
   top: 0;
-  right: -600px;
+  right: 0;
   height: 100%;
-  max-width: 440px;
   background: #fff;
-  /*transform: translateX(600px);
+  max-width: 440px;
+  transform: translateX(600px);
   -webkit-transform: translateX(600px);
   -moz-transform: translateX(600px);
   -ms-transform: translateX(600px);
-  -o-transform: translateX(600px);*/
-  transition: transform 0.2s;
-  -webkit-transition: transform 0.2s;
-  -moz-transition: transform 0.2s;
-  -ms-transition: transform 0.2s;
-  -o-transition: transform 0.2s;
+  -o-transform: translateX(600px);
+  transition: transform 0.2s linear;
+  -webkit-transition: transform 0.2s linear;
+  -moz-transition: transform 0.2s linear;
+  -ms-transition: transform 0.2s linear;
+  -o-transition: transform 0.2s linear;
 }
-
-.modal--callback--active,
-.modal--feedback--active {
-  right: 0;
-  /*transform: translateX(0);
+/*.modal--callback--active,
+.modal--active */ 
+.modal--active {
+  transform: translateX(0);
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
-  -o-transform: translateX(0);*/
+  -o-transform: translateX(0);
   z-index: 999;
+  //right: 0;
+  //right: 0px;
   box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
 }
 

@@ -689,8 +689,8 @@ body {
   -o-transition: transform 0.2s;
 }
 
-.modal--feedback--active,
-.modal--callback--active {
+.modal--active,
+.modal--active {
   transform: translateX(0%);
   -webkit-transform: translateX(0%);
   -moz-transform: translateX(0%);
