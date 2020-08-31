@@ -1,13 +1,12 @@
 .button {
   border: none;
   cursor: pointer;
-}
-
-.button--menu {
+  
+  &--menu {
   background-color: inherit;
-}
-
-.button-more {
+  }
+  
+  &-more {
   border: none;
   background-color: inherit;
   font-size: 16px;
@@ -19,24 +18,21 @@
   cursor: pointer;
   padding-left: 16px;
   margin-bottom: 16px;
-}
 
-.button-more::before {
-  content: '';
-  background: url('../img/icon-read-more.svg') no-repeat center center;
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
-}
+  &::before {
+    content: '';
+    background: url('../img/icon-read-more.svg') no-repeat center center;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    }
 
-@media (min-width: 768px) {
-  .button-more {
+  @media (min-width: 768px) {
     padding-left: 25px;
   }
-}
 
-@media (min-width: 1440px) {
-  .button-more {
+  @media (min-width: 1440px) {
     padding-left: 32px;
+  }
   }
 }

@@ -7,16 +7,16 @@
   height: 100%;
   background: #FFFFFF;
   opacity: 0.96;
-}
 
-.overlay--menu {
-  z-index: 9;
-}
+  &--menu {
+    z-index: 9;
+  }
 
-.overlay--modal {
-  z-index: 99;
-}
+  &--modal {
+    z-index: 99;
+  }
 
-.overlay--active {
-  display: block;
+  &--active {
+    display: block;
+  }
 }
